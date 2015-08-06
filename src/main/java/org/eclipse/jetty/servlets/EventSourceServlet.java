@@ -127,7 +127,7 @@ public abstract class EventSourceServlet extends HttpServlet
     protected void respond(HttpServletRequest request, HttpServletResponse response) throws IOException
     {
         response.setStatus(HttpServletResponse.SC_OK);
-        response.setCharacterEncoding(UTF_8.name());
+        response.setCharacterEncoding(null);
         response.setContentType("text/event-stream");
         // By adding this header, and not closing the connection,
         // we disable HTTP chunking, and we can use write()+flush()
